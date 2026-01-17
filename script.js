@@ -13,5 +13,13 @@ function operate(firstNumber, secondNumber, operator) {
   }
 }
 
-console.log(operate(10, 11, '+')); 
-// Expected output : 21
+const numberContainer = document.querySelector(".number-container")
+const numbers = '0123456789'
+
+for (let i = 0; i < numbers.length; i++) {
+  const newButton = document.createElement("button")
+  newButton.classList.add(`button-${i}`)
+  newButton.textContent = `${numbers[i]}`
+
+  numberContainer.appendChild(newButton)
+}
